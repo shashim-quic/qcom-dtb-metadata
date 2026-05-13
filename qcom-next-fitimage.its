@@ -137,6 +137,15 @@
 			data = /incbin/("./arch/arm64/boot/dts/qcom/monaco-evk-camera-imx577.dtbo");
 			type = "flat_dt";
 		};
+		fdt-shikra-cqm-evk.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/shikra-cqm-evk.dtb");
+		};
+		fdt-shikra-cqs-evk.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/shikra-cqs-evk.dtb");
+		};
+		fdt-shikra-iqs-evk.dtb {
+			data = /incbin/("./arch/arm64/boot/dts/qcom/shikra-iqs-evk.dtb");
+		};
 	};
 
 	configurations {
@@ -307,6 +316,18 @@
 		conf-42 {
 			compatible = "qcom,purwa-evk-el2kvm";
 			fdt = "fdt-purwa-iot-evk.dtb", "fdt-x1-el2.dtbo";
+		};
+		conf-43 {
+			compatible = "qcom,shikra_cqm-evk";
+			fdt = "fdt-shikra-cqm-evk.dtb";
+		};
+		conf-44 {
+			compatible = "qcom,shikra_cqs-evk";
+			fdt = "fdt-shikra-cqs-evk.dtb"
+		};
+		conf-45 {
+			compatible = "qcom,shikra_iqs-evk";
+			fdt = "fdt-shikra-iqs-evk.dtb"
 		};
 	};
 };
